@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <%= stylesheet_link_tag "index" %>
+  <title>first page</title>
+</head>
+  <body>
+    
+<p id="notice"><%= notice %></p>
+
+<h1>This is final exam</h1>
+
+<table>
+  <p>If you want to create new data, please click button below</p>
+
+
+  <tbody>
+    <% @flowers.each_with_index do |flower, num| %>
+      
+      <ul class="list-group">
+        <li class="list-group-item">user_id:<%= flower.user_id %></li>
+        <li class="list-group-item">first name:<%= flower.first_name %></li>
+        <li class="list-group-item">last_name:<%= flower.last_name %></li>
+        <li class="list-group-item">phone_number:<%= flower.phone_number %></li>
+        <li class="list-group-item">address:<%= flower.address %></li>
+        <li class="list-group-item">postal_code:<%= flower.postal_code %></li>
+        <li class="list-group-item">product_name:<%= flower.product_name %></li>
+        <div class="show_edit_destroy">
+          <p class="btn btn-primary"><%= link_to "Show", flower %></p>
+          <p class="btn btn-primary"><%= link_to "Edit", edit_flower_path(flower) %></p>
+          <p class="btn btn-primary"><%= link_to "Destroy", flower, method: :delete, data: { confirm: 'Are you sure to  want to delete it?' } %></p>
+        </div>
+      </ul>
+    <% end %>
+  </tbody>
+</table>
+
+
+    <br>
+    <a class="btn btn-primary" <%= link_to "Add new data", new_flower_path %></a>
+
+
+
+  </body>
+</html>

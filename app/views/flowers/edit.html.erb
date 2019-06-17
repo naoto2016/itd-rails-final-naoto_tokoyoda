@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Edit</title>
+</head>
+<body>
+	<h1>Editing Flower</h1>
+
+	<%= render 'form', flower: @flower %>
+	<a class="btn btn-primary" <%= link_to 'Show', @flower %></a>
+	<a class="btn btn-primary" 	<%= link_to 'Back', flowers_path %></a>
+	
+</body>
+</html>

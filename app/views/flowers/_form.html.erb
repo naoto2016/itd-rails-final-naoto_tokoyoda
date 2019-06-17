@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <%= stylesheet_link_tag "form" %>
+
+  <title>form</title>
+</head>
+  <body>
+    
+<%= form_with(model: flower, local: true) do |form| %>
+  <% if flower.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flower.errors.count, "error") %> prohibited this flower from being saved:</h2>
+
+      <ul>
+      <% flower.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postal_code %>
+    <%= form.text_field :postal_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_name %>
+    <%= form.text_field :product_name %>
+  </div>
+
+  <div class="actions ">
+    <input class="btn btn-primary" type="submit" name="commit" value="Add data" data-disable-with="add data">
+  </div>
+<% end %>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+body{
+	text-align:center;
+}
+
+.show_edit_destroy {
+	background-color:pink;
+}
+
+a:visited {
+    color: white;
+}
+
+a{
+	color:white;
+
+}
+a:hover{
+	text-decoration:none;
+	background-color:transparent;
+}
+p.btn.btn-primary{
+	margin-top: 16px;
+	
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>show</title>
+</head>
+  <body>
+    
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>User:</strong>
+      <%= @flower.user_id %>
+    </p>
+
+    <p>
+      <strong>First name:</strong>
+      <%= @flower.first_name %>
+    </p>
+
+    <p>
+      <strong>Last name:</strong>
+      <%= @flower.last_name %>
+    </p>
+
+    <p>
+      <strong>Phone number:</strong>
+      <%= @flower.phone_number %>
+    </p>
+
+    <p>
+      <strong>Address:</strong>
+      <%= @flower.address %>
+    </p>
+
+    <p>
+      <strong>Postal code:</strong>
+      <%= @flower.postal_code %>
+    </p>
+
+    <p>
+      <strong>Product name:</strong>
+      <%= @flower.product_name %>
+    </p>
+
+
+    <a class="btn btn-primary" <%= link_to 'Edit', edit_flower_path(@flower) %></a>
+    <a class="btn btn-primary" <%= link_to 'Back', flowers_path %></a>
+
+
+        
+  </body>
+</html>
+
